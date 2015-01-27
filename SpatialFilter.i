@@ -10,6 +10,7 @@
 class SpatialFilter {
 public:
   virtual bool matchesPoint(double x, double y);
+  virtual bool matchesPoint(vector<double> &point);
 
   // static methods:
   static SpatialFilterPtr unionFilter(SpatialFilterPtr a, SpatialFilterPtr b);
