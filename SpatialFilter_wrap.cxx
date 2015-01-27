@@ -3324,6 +3324,36 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SpatialFilter_negatedFilter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilter_negatedFilter",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_SpatialFilterPtr,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilter_negatedFilter" "', argument " "1"" of type '" "SpatialFilterPtr""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SpatialFilter_negatedFilter" "', argument " "1"" of type '" "SpatialFilterPtr""'");
+    } else {
+      SpatialFilterPtr * temp = reinterpret_cast< SpatialFilterPtr * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = SpatialFilter::negatedFilter(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SpatialFilter_matchingX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   double arg1 ;
@@ -3361,6 +3391,107 @@ SWIGINTERN PyObject *_wrap_SpatialFilter_matchingY(PyObject *SWIGUNUSEDPARM(self
   } 
   arg1 = static_cast< double >(val1);
   result = SpatialFilter::matchingY(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilter_lessThanX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double arg1 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilter_lessThanX",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_double(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SpatialFilter_lessThanX" "', argument " "1"" of type '" "double""'");
+  } 
+  arg1 = static_cast< double >(val1);
+  result = SpatialFilter::lessThanX(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilter_lessThanY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double arg1 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilter_lessThanY",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_double(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SpatialFilter_lessThanY" "', argument " "1"" of type '" "double""'");
+  } 
+  arg1 = static_cast< double >(val1);
+  result = SpatialFilter::lessThanY(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilter_greaterThanX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double arg1 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilter_greaterThanX",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_double(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SpatialFilter_greaterThanX" "', argument " "1"" of type '" "double""'");
+  } 
+  arg1 = static_cast< double >(val1);
+  result = SpatialFilter::greaterThanX(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilter_greaterThanY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double arg1 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilter_greaterThanY",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_double(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SpatialFilter_greaterThanY" "', argument " "1"" of type '" "double""'");
+  } 
+  arg1 = static_cast< double >(val1);
+  result = SpatialFilter::greaterThanY(arg1);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilter_allSpace(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)":SpatialFilter_allSpace")) SWIG_fail;
+  result = SpatialFilter::allSpace();
   resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -3771,6 +3902,45 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_negatedFilter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  SpatialFilterPtr arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SpatialFilterPtr_negatedFilter",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_negatedFilter" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_SpatialFilterPtr,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SpatialFilterPtr_negatedFilter" "', argument " "2"" of type '" "SpatialFilterPtr""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SpatialFilterPtr_negatedFilter" "', argument " "2"" of type '" "SpatialFilterPtr""'");
+    } else {
+      SpatialFilterPtr * temp = reinterpret_cast< SpatialFilterPtr * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (*arg1)->negatedFilter(arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SpatialFilterPtr_matchingX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
@@ -3833,6 +4003,152 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_lessThanX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SpatialFilterPtr_lessThanX",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_lessThanX" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SpatialFilterPtr_lessThanX" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  result = (*arg1)->lessThanX(arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_lessThanY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SpatialFilterPtr_lessThanY",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_lessThanY" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SpatialFilterPtr_lessThanY" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  result = (*arg1)->lessThanY(arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_greaterThanX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SpatialFilterPtr_greaterThanX",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_greaterThanX" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SpatialFilterPtr_greaterThanX" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  result = (*arg1)->greaterThanX(arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_greaterThanY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SpatialFilterPtr_greaterThanY",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_greaterThanY" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SpatialFilterPtr_greaterThanY" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  result = (*arg1)->greaterThanY(arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr_allSpace(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilterPtr_allSpace",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr_allSpace" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  result = (*arg1)->allSpace();
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *SpatialFilterPtr_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
@@ -3845,8 +4161,14 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SpatialFilter_matchesPoint", _wrap_SpatialFilter_matchesPoint, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilter_unionFilter", _wrap_SpatialFilter_unionFilter, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilter_intersectionFilter", _wrap_SpatialFilter_intersectionFilter, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_negatedFilter", _wrap_SpatialFilter_negatedFilter, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilter_matchingX", _wrap_SpatialFilter_matchingX, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilter_matchingY", _wrap_SpatialFilter_matchingY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_lessThanX", _wrap_SpatialFilter_lessThanX, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_lessThanY", _wrap_SpatialFilter_lessThanY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_greaterThanX", _wrap_SpatialFilter_greaterThanX, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_greaterThanY", _wrap_SpatialFilter_greaterThanY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilter_allSpace", _wrap_SpatialFilter_allSpace, METH_VARARGS, NULL},
 	 { (char *)"delete_SpatialFilter", _wrap_delete_SpatialFilter, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilter_swigregister", SpatialFilter_swigregister, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr___deref__", _wrap_SpatialFilterPtr___deref__, METH_VARARGS, NULL},
@@ -3857,8 +4179,14 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SpatialFilterPtr_matchesPoint", _wrap_SpatialFilterPtr_matchesPoint, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_unionFilter", _wrap_SpatialFilterPtr_unionFilter, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_intersectionFilter", _wrap_SpatialFilterPtr_intersectionFilter, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_negatedFilter", _wrap_SpatialFilterPtr_negatedFilter, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_matchingX", _wrap_SpatialFilterPtr_matchingX, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_matchingY", _wrap_SpatialFilterPtr_matchingY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_lessThanX", _wrap_SpatialFilterPtr_lessThanX, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_lessThanY", _wrap_SpatialFilterPtr_lessThanY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_greaterThanX", _wrap_SpatialFilterPtr_greaterThanX, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_greaterThanY", _wrap_SpatialFilterPtr_greaterThanY, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr_allSpace", _wrap_SpatialFilterPtr_allSpace, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_swigregister", SpatialFilterPtr_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };

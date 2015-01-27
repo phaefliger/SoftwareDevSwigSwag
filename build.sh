@@ -40,9 +40,9 @@ LINK_ALL="-lpython2.7 -L$Trilinos_LIBRARY_DIRS $Trilinos_LIBRARIES_LINK_LINE -L$
 #$CPP -c -Wall -fpic BF_wrap.cxx $INCLUDE_ALL
 #$CPP -shared BF_wrap.o -o _BF.so $LINK_ALL
 
-#swig -Wall -c++ -python -I$CAMELLIA_INCLUDE SpatialFilter.i
-#$CPP -c -Wall -fpic SpatialFilter_wrap.cxx $INCLUDE_ALL
-#$CPP -shared SpatialFilter_wrap.o -o _SpatialFilter.so $LINK_ALL
+swig -Wall -c++ -python -I$CAMELLIA_INCLUDE SpatialFilter.i
+$CPP -c -Wall -fpic SpatialFilter_wrap.cxx $INCLUDE_ALL
+$CPP -shared SpatialFilter_wrap.o -o _SpatialFilter.so $LINK_ALL
 
 #swig -Wall -c++ -python -I$CAMELLIA_INCLUDE BC.i
 #$CPP -c -Wall -fpic BC_wrap.cxx $INCLUDE_ALL

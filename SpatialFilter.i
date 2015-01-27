@@ -9,15 +9,22 @@
 
 class SpatialFilter {
 public:
-  virtual bool matchesPoint(double x, double y);
-  virtual bool matchesPoint(vector<double> &point);
+  virtual bool matchesPoint(double x, double y); //
+  virtual bool matchesPoint(vector<double> &point); 
 
   // static methods:
-  static SpatialFilterPtr unionFilter(SpatialFilterPtr a, SpatialFilterPtr b);
-  static SpatialFilterPtr intersectionFilter(SpatialFilterPtr a, SpatialFilterPtr b);
+  static SpatialFilterPtr unionFilter(SpatialFilterPtr a, SpatialFilterPtr b); //
+  static SpatialFilterPtr intersectionFilter(SpatialFilterPtr a, SpatialFilterPtr b); //
+  static SpatialFilterPtr negatedFilter(SpatialFilterPtr filterToNegate);
 
-  static SpatialFilterPtr matchingX(double x);
-  static SpatialFilterPtr matchingY(double y);
+  static SpatialFilterPtr matchingX(double x); //
+  static SpatialFilterPtr matchingY(double y); //
+  static SpatialFilterPtr lessThanX(double x);
+  static SpatialFilterPtr lessThanY(double y);
+  static SpatialFilterPtr greaterThanX(double x);
+  static SpatialFilterPtr greaterThanY(double y);
+
+  static SpatialFilterPtr allSpace(); 
 };
 
 //FunctionPtr operator*(double weight, FunctionPtr f);

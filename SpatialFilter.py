@@ -81,10 +81,22 @@ class SpatialFilter(_object):
     if _newclass:unionFilter = staticmethod(_SpatialFilter.SpatialFilter_unionFilter)
     __swig_getmethods__["intersectionFilter"] = lambda x: _SpatialFilter.SpatialFilter_intersectionFilter
     if _newclass:intersectionFilter = staticmethod(_SpatialFilter.SpatialFilter_intersectionFilter)
+    __swig_getmethods__["negatedFilter"] = lambda x: _SpatialFilter.SpatialFilter_negatedFilter
+    if _newclass:negatedFilter = staticmethod(_SpatialFilter.SpatialFilter_negatedFilter)
     __swig_getmethods__["matchingX"] = lambda x: _SpatialFilter.SpatialFilter_matchingX
     if _newclass:matchingX = staticmethod(_SpatialFilter.SpatialFilter_matchingX)
     __swig_getmethods__["matchingY"] = lambda x: _SpatialFilter.SpatialFilter_matchingY
     if _newclass:matchingY = staticmethod(_SpatialFilter.SpatialFilter_matchingY)
+    __swig_getmethods__["lessThanX"] = lambda x: _SpatialFilter.SpatialFilter_lessThanX
+    if _newclass:lessThanX = staticmethod(_SpatialFilter.SpatialFilter_lessThanX)
+    __swig_getmethods__["lessThanY"] = lambda x: _SpatialFilter.SpatialFilter_lessThanY
+    if _newclass:lessThanY = staticmethod(_SpatialFilter.SpatialFilter_lessThanY)
+    __swig_getmethods__["greaterThanX"] = lambda x: _SpatialFilter.SpatialFilter_greaterThanX
+    if _newclass:greaterThanX = staticmethod(_SpatialFilter.SpatialFilter_greaterThanX)
+    __swig_getmethods__["greaterThanY"] = lambda x: _SpatialFilter.SpatialFilter_greaterThanY
+    if _newclass:greaterThanY = staticmethod(_SpatialFilter.SpatialFilter_greaterThanY)
+    __swig_getmethods__["allSpace"] = lambda x: _SpatialFilter.SpatialFilter_allSpace
+    if _newclass:allSpace = staticmethod(_SpatialFilter.SpatialFilter_allSpace)
     __swig_destroy__ = _SpatialFilter.delete_SpatialFilter
     __del__ = lambda self : None;
 SpatialFilter_swigregister = _SpatialFilter.SpatialFilter_swigregister
@@ -98,6 +110,10 @@ def SpatialFilter_intersectionFilter(*args):
   return _SpatialFilter.SpatialFilter_intersectionFilter(*args)
 SpatialFilter_intersectionFilter = _SpatialFilter.SpatialFilter_intersectionFilter
 
+def SpatialFilter_negatedFilter(*args):
+  return _SpatialFilter.SpatialFilter_negatedFilter(*args)
+SpatialFilter_negatedFilter = _SpatialFilter.SpatialFilter_negatedFilter
+
 def SpatialFilter_matchingX(*args):
   return _SpatialFilter.SpatialFilter_matchingX(*args)
 SpatialFilter_matchingX = _SpatialFilter.SpatialFilter_matchingX
@@ -105,6 +121,26 @@ SpatialFilter_matchingX = _SpatialFilter.SpatialFilter_matchingX
 def SpatialFilter_matchingY(*args):
   return _SpatialFilter.SpatialFilter_matchingY(*args)
 SpatialFilter_matchingY = _SpatialFilter.SpatialFilter_matchingY
+
+def SpatialFilter_lessThanX(*args):
+  return _SpatialFilter.SpatialFilter_lessThanX(*args)
+SpatialFilter_lessThanX = _SpatialFilter.SpatialFilter_lessThanX
+
+def SpatialFilter_lessThanY(*args):
+  return _SpatialFilter.SpatialFilter_lessThanY(*args)
+SpatialFilter_lessThanY = _SpatialFilter.SpatialFilter_lessThanY
+
+def SpatialFilter_greaterThanX(*args):
+  return _SpatialFilter.SpatialFilter_greaterThanX(*args)
+SpatialFilter_greaterThanX = _SpatialFilter.SpatialFilter_greaterThanX
+
+def SpatialFilter_greaterThanY(*args):
+  return _SpatialFilter.SpatialFilter_greaterThanY(*args)
+SpatialFilter_greaterThanY = _SpatialFilter.SpatialFilter_greaterThanY
+
+def SpatialFilter_allSpace():
+  return _SpatialFilter.SpatialFilter_allSpace()
+SpatialFilter_allSpace = _SpatialFilter.SpatialFilter_allSpace
 
 class SpatialFilterPtr(_object):
     __swig_setmethods__ = {}
@@ -124,8 +160,14 @@ class SpatialFilterPtr(_object):
     def matchesPoint(self, *args): return _SpatialFilter.SpatialFilterPtr_matchesPoint(self, *args)
     def unionFilter(self, *args): return _SpatialFilter.SpatialFilterPtr_unionFilter(self, *args)
     def intersectionFilter(self, *args): return _SpatialFilter.SpatialFilterPtr_intersectionFilter(self, *args)
+    def negatedFilter(self, *args): return _SpatialFilter.SpatialFilterPtr_negatedFilter(self, *args)
     def matchingX(self, *args): return _SpatialFilter.SpatialFilterPtr_matchingX(self, *args)
     def matchingY(self, *args): return _SpatialFilter.SpatialFilterPtr_matchingY(self, *args)
+    def lessThanX(self, *args): return _SpatialFilter.SpatialFilterPtr_lessThanX(self, *args)
+    def lessThanY(self, *args): return _SpatialFilter.SpatialFilterPtr_lessThanY(self, *args)
+    def greaterThanX(self, *args): return _SpatialFilter.SpatialFilterPtr_greaterThanX(self, *args)
+    def greaterThanY(self, *args): return _SpatialFilter.SpatialFilterPtr_greaterThanY(self, *args)
+    def allSpace(self): return _SpatialFilter.SpatialFilterPtr_allSpace(self)
 SpatialFilterPtr_swigregister = _SpatialFilter.SpatialFilterPtr_swigregister
 SpatialFilterPtr_swigregister(SpatialFilterPtr)
 
