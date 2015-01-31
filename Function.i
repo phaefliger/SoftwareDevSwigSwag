@@ -79,5 +79,17 @@ public:
     FunctionPtr __rsub__(double value) {
       return value - *self;
     }
+    FunctionPtr __mul__(FunctionPtr f2) {
+      return *self * f2;
+    }
+    FunctionPtr __div__(FunctionPtr scalarDivision) {
+      return *self / scalarDivision;
+    }
+    FunctionPtr __div__(double divisor) {
+      return *self / divisor;
+    }
+    FunctionPtr __rdiv__(double value) {
+      return value / *self;
+    }
   }
 };
