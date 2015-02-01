@@ -91,5 +91,14 @@ public:
     FunctionPtr __rdiv__(double value) {
       return value / *self;
     }
+    FunctionPtr __mul__(vector<double> weight) {
+      return *self * weight;
+    }
+    FunctionPtr __rmul__(vector<double> weight) {
+      return weight * *self;
+    }
+    FunctionPtr __neg__() {
+      return -1 * *self;
+    }
   }
 };
