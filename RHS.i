@@ -9,7 +9,10 @@
 
 class RHS {
  public:
-  RHS(bool legacySubclass); // may need to overload and always pass false to it?
+  RHS(bool legacySubclass); 
+  RHS(){ // specification said Python interface would not require the legacy bool and always pass false
+    return RHS(false);
+  }
 
   bool nonZeroRHS(int testVarID);
   
