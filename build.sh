@@ -24,9 +24,9 @@ LINK_ALL="-lpython2.7 -L$Trilinos_LIBRARY_DIRS $Trilinos_LIBRARIES_LINK_LINE -L$
 #$CPP -c -Wall -fpic VarFactory_wrap.cxx $INCLUDE_ALL
 #$CPP -shared VarFactory_wrap.o -o _VarFactory.so $LINK_ALL
 
-#swig -Wall -c++ -python -I$CAMELLIA_INCLUDE Function.i
-#$CPP -c -Wall -fpic Function_wrap.cxx $INCLUDE_ALL
-#$CPP -shared Function_wrap.o -o _Function.so $LINK_ALL
+swig -Wall -c++ -python -I$CAMELLIA_INCLUDE Function.i
+$CPP -c -Wall -fpic Function_wrap.cxx $INCLUDE_ALL
+$CPP -shared Function_wrap.o -o _Function.so $LINK_ALL
 
 #swig -Wall -c++ -python -I$CAMELLIA_INCLUDE LinearTerm.i
 #$CPP -c -Wall -fpic LinearTerm_wrap.cxx $INCLUDE_ALL
