@@ -1,13 +1,18 @@
-import Adder
-import unittest
+#import Adder
+#import unittest
 
-class TestAdder(unittest.TestCase):
-  """Test Adder.py's addNumbers() method"""
-  def testadd(self):
-    self.assertAlmostEqual(8,Adder.addNumbers(5,3),delta=1e-12)
-    self.assertEqual(8,Adder.addNumbers(5,3))
+#class TestAdder(unittest.TestCase):
+ # """Test Adder.py's addNumbers() method"""
+  #def testadd(self):
+   # self.assertAlmostEqual(8,Adder.addNumbers(5,3),delta=1e-12)
+    #self.assertEqual(8,Adder.addNumbers(5,3))
   
 
 # Run the tests:
-if (__name__ == '__main__'):
-  unittest.main()
+#if (__name__ == '__main__'):
+ # unittest.main()
+ 
+ import Function
+ import unittest
+ 
+ class TestFunction(unittest.TestCase):
