@@ -41,4 +41,4 @@ public:
       return SpatialFilter::intersectionFilter(*self,b);
     }
   }
-};
+}; 
