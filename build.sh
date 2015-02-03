@@ -40,7 +40,7 @@ $CPP -shared Function_wrap.o -o _Function.so $LINK_ALL
 #$CPP -c -Wall -fpic BF_wrap.cxx $INCLUDE_ALL
 #$CPP -shared BF_wrap.o -o _BF.so $LINK_ALL
 
-swig -Wall -c++ -python -I$CAMELLIA_INCLUDE SpatialFilter.i
+swig -Wall -c++ -python -I$CAMELLIA_INCLUDE SpatialFilter.i 
 $CPP -c -Wall -fpic SpatialFilter_wrap.cxx $INCLUDE_ALL
 $CPP -shared SpatialFilter_wrap.o -o _SpatialFilter.so $LINK_ALL
 
