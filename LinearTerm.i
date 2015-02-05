@@ -24,7 +24,7 @@ public:
   
   
 
-
+};
 //FunctionPtr operator*(double weight, FunctionPtr f);                                                                                                                               
 
 class LinearTermPtr {
