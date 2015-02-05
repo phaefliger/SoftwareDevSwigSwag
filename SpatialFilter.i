@@ -40,7 +40,7 @@ public:
     SpatialFilterPtr __and__(SpatialFilterPtr b) {
       return SpatialFilter::intersectionFilter(*self,b);
     }
-    SpatialFilterPtr __not__(){
+    SpatialFilterPtr __invert__(){
       return SpatialFilter::negatedFilter(*self);
     }
   }

@@ -151,7 +151,7 @@ class SpatialFilterPtr(_object):
     def __deref__(self): return _SpatialFilter.SpatialFilterPtr___deref__(self)
     def __or__(self, *args): return _SpatialFilter.SpatialFilterPtr___or__(self, *args)
     def __and__(self, *args): return _SpatialFilter.SpatialFilterPtr___and__(self, *args)
-    def __not__(self): return _SpatialFilter.SpatialFilterPtr___not__(self)
+    def __invert__(self): return _SpatialFilter.SpatialFilterPtr___invert__(self)
     def __init__(self): 
         this = _SpatialFilter.new_SpatialFilterPtr()
         try: self.this.append(this)
