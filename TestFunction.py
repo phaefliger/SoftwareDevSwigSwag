@@ -16,3 +16,41 @@
  import unittest
  
  class TestFunction(unittest.TestCase):
+  
+  f = Function.Function
+  
+  def test_x_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertAlmostEqual(16.0, f.evaluate(v.x(), 4, 1), delta=1e-12)
+   
+  def test_y_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertAlmostEqual(81.0, f.evaluate(v.x(), 1, 3), delta=1e-12)
+  
+  def test_dx_(self):
+   x3 = f.xn(3)
+   self.assertAlmostEqual(12.0, f.evaluate(x3.dx(), 2, 1), delta=1e-12)
+   
+  def test_dy_(self):
+   y3 = f.yn(3)
+   self.assertAlmostEqual(48.0, f.evaluate(y3.dy(), 1, 4), delta=1e-12)
+  
+  def test_div_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertAlmostEqual(40.0, f.evaluate(v.div(), 4, 2), delta=1e-12)
+  
+  def test_xn_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(9.0, f.evaluate(x2, 3, 1), delta=1e-12)
+  
+  def test_yn_(self):
+   y2 = f.yn(2)
+   self.assertAlmostEqual(25.0, f.evaluate(y2, 1, 5), delta=1e-12)
+   
+   

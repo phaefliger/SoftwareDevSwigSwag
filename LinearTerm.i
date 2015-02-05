@@ -4,6 +4,7 @@
 %}
 
 %include "std_string.i"
+%include "Var.i"
 
 %nodefaultctor LinearTerm;  // Disable the default constructor for class LinearTerm                                                                                                  
 
@@ -23,7 +24,7 @@ public:
   
   
 
-
+};
 //FunctionPtr operator*(double weight, FunctionPtr f);                                                                                                                               
 
 class LinearTermPtr {
@@ -73,10 +74,10 @@ public:
     LinearTermPtr __sub__(VarPtr v1, VarPtr v2){
       return v1 -v2;
     }
-    LinearTermPtr __sub__(VarPtr v){
+    LinearTermPtr __neg__(VarPtr v){
       return -v1;
     }
-    LinearTermPtr __sub__(LinearTermPtr a){
+    LinearTermPtr __neg__(LinearTermPtr a){
       return -a;
     }
     LinearTermPtr __sub__(VarPtr v){
