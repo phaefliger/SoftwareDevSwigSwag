@@ -16,5 +16,26 @@ class TestSpatialFilter(unittest.TestCase):
     def testFunc_allSpace(self):
         x = sf.matchingX(1.0)
         y = sf.negatedFilter(x)
-        xy = x & y
+        xy = x | y
         self.assertEqual(xy, sf.allSpace())
+
+    # unionFilter
+    def testFunc_unionFilter(self):
+        x = sf.matchingX(36.0)
+        y = sf.matchingY(64.0)
+        xy = sf.unionFilter(x, y)
+        self.assertEqual(True, xy.matchesPoint(36.0, 64.0)
+        
+    # intersectionFilter
+    def testFunc_intersectionFilter(self):
+        x = sf.greaterThanX(1.0)
+        y = sf.allSpace()
+        xy = sf.intersectionFilter(x, y)
+        self.assertEqual(xy, x)
+        
+    # negatedFilter
+    def testFunc_negatedFilter(self):
+        x = sf.matchingX(1.0)
+        y = sf.negatedFilter(x)
+        xy = x & y
+        self.assertEqual(xy, sf.negatedFilter(sf.allSpace()))
