@@ -3098,6 +3098,9 @@ SWIGINTERN SpatialFilterPtr SpatialFilterPtr___or__(SpatialFilterPtr *self,Spati
 SWIGINTERN SpatialFilterPtr SpatialFilterPtr___and__(SpatialFilterPtr *self,SpatialFilterPtr b){
       return SpatialFilter::intersectionFilter(*self,b);
     }
+SWIGINTERN SpatialFilterPtr SpatialFilterPtr___not__(SpatialFilterPtr *self){
+      return SpatialFilter::negatedFilter(*self);
+    }
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -3620,6 +3623,28 @@ SWIGINTERN PyObject *_wrap_SpatialFilterPtr___and__(PyObject *SWIGUNUSEDPARM(sel
     }
   }
   result = SpatialFilterPtr___and__(arg1,arg2);
+  resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SpatialFilterPtr___not__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SpatialFilterPtr *arg1 = (SpatialFilterPtr *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SpatialFilterPtr result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:SpatialFilterPtr___not__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SpatialFilterPtr, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SpatialFilterPtr___not__" "', argument " "1"" of type '" "SpatialFilterPtr *""'"); 
+  }
+  arg1 = reinterpret_cast< SpatialFilterPtr * >(argp1);
+  result = SpatialFilterPtr___not__(arg1);
   resultobj = SWIG_NewPointerObj((new SpatialFilterPtr(static_cast< const SpatialFilterPtr& >(result))), SWIGTYPE_p_SpatialFilterPtr, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -4174,6 +4199,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SpatialFilterPtr___deref__", _wrap_SpatialFilterPtr___deref__, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr___or__", _wrap_SpatialFilterPtr___or__, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr___and__", _wrap_SpatialFilterPtr___and__, METH_VARARGS, NULL},
+	 { (char *)"SpatialFilterPtr___not__", _wrap_SpatialFilterPtr___not__, METH_VARARGS, NULL},
 	 { (char *)"new_SpatialFilterPtr", _wrap_new_SpatialFilterPtr, METH_VARARGS, NULL},
 	 { (char *)"delete_SpatialFilterPtr", _wrap_delete_SpatialFilterPtr, METH_VARARGS, NULL},
 	 { (char *)"SpatialFilterPtr_matchesPoint", _wrap_SpatialFilterPtr_matchesPoint, METH_VARARGS, NULL},
