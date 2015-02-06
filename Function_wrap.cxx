@@ -3442,38 +3442,6 @@ SWIGINTERNINLINE PyObject*
 }
 
 
-  #define SWIG_From_double   PyFloat_FromDouble 
-
-
-#include <limits.h>
-#if !defined(SWIG_NO_LLONG_MAX)
-# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
-#   define LLONG_MAX __LONG_LONG_MAX__
-#   define LLONG_MIN (-LLONG_MAX - 1LL)
-#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
-# endif
-#endif
-
-
-SWIGINTERN int
-SWIG_AsVal_int (PyObject * obj, int *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < INT_MIN || v > INT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< int >(v);
-    }
-  }  
-  return res;
-}
-
-SWIGINTERN std::string Function___str__(Function *self){
-      return self->displayString();
-    }
-
 SWIGINTERN swig_type_info*
 SWIG_pchar_descriptor(void)
 {
@@ -3518,6 +3486,38 @@ SWIG_From_std_string  (const std::string& s)
   return SWIG_FromCharPtrAndSize(s.data(), s.size());
 }
 
+
+  #define SWIG_From_double   PyFloat_FromDouble 
+
+
+#include <limits.h>
+#if !defined(SWIG_NO_LLONG_MAX)
+# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
+#   define LLONG_MAX __LONG_LONG_MAX__
+#   define LLONG_MIN (-LLONG_MAX - 1LL)
+#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
+# endif
+#endif
+
+
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< int >(v);
+    }
+  }  
+  return res;
+}
+
+SWIGINTERN std::string Function___str__(Function *self){
+      return self->displayString();
+    }
 SWIGINTERN FunctionPtr FunctionPtr___add____SWIG_0(FunctionPtr *self,FunctionPtr f2){
       return *self + f2;
     }
@@ -5289,7 +5289,7 @@ SWIGINTERN PyObject *_wrap_Function_displayString(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  string result;
+  std::string result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Function_displayString",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Function, 0 |  0 );
@@ -5298,7 +5298,7 @@ SWIGINTERN PyObject *_wrap_Function_displayString(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = reinterpret_cast< Function * >(argp1);
   result = (arg1)->displayString();
-  resultobj = SWIG_NewPointerObj((new string(static_cast< const string& >(result))), SWIGTYPE_p_string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -7037,7 +7037,7 @@ SWIGINTERN PyObject *_wrap_FunctionPtr_displayString(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  string result;
+  std::string result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:FunctionPtr_displayString",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_FunctionPtr, 0 |  0 );
@@ -7046,7 +7046,7 @@ SWIGINTERN PyObject *_wrap_FunctionPtr_displayString(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = reinterpret_cast< FunctionPtr * >(argp1);
   result = (*arg1)->displayString();
-  resultobj = SWIG_NewPointerObj((new string(static_cast< const string& >(result))), SWIGTYPE_p_string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
