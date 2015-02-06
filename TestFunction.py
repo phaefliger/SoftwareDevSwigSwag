@@ -90,17 +90,31 @@
    y2 = f.yn(2)
    self.assertAlmostEqual(25.0, f.evaluate(y2, 1, 5), delta=1e-12)
    
-  def test_mult2f_(self):
+  def test_mult2F_(self):
    x2 = f.xn(2)
    y2 = f.yn(2)
    self.assertAlmostEqual(36.0, f.evaluate(x2*y2, 2, 3), delta=1e-12)
    
-  def test_divide2f_(self):
+  def test_divide2F_(self):
    x2 = f.xn(2)
    y2 = f.yn(2)
    self.assertAlmostEqual(4.0, f.evaluate(x2/y2, 4, 2), delta=1e-12)
    
-  def test_dividefd_(self):
+  def test_divideFD_(self):
    x2 = f.xn(2)
    self.assertAlmostEqual(8.0, f.evaluate(x2/2, 4, 1), delta=1e-12)
+   
+  def test_divideDF_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(2.0, f.evaluate(18/x2, 3, 1), delta=1e-12)
+   
+  def test_multDF_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(36.0, f.evaluate(4*x2, 3, 1), delta=1e-12)
+   
+  def test_multFD_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(50.0, f.evaluate(x2*2, 5, 1), delta=1e-12)
+   
+  
    
