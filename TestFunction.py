@@ -68,6 +68,19 @@
    
   def test_composedFunction_(self):
    
+   
+  def test_constant_(self):
+   
+   
+  def test_vectorize_(self):
+   
+   
+  def test_normal_(self):
+   
+   
+  def test_solution(self):
+   
+   
   
   def test_xn_(self):
    x2 = f.xn(2)
@@ -77,4 +90,17 @@
    y2 = f.yn(2)
    self.assertAlmostEqual(25.0, f.evaluate(y2, 1, 5), delta=1e-12)
    
+  def test_mult2f_(self):
+   x2 = f.xn(2)
+   y2 = f.yn(2)
+   self.assertAlmostEqual(36.0, f.evaluate(x2*y2, 2, 3), delta=1e-12)
+   
+  def test_divide2f_(self):
+   x2 = f.xn(2)
+   y2 = f.yn(2)
+   self.assertAlmostEqual(4.0, f.evaluate(x2/y2, 4, 2), delta=1e-12)
+   
+  def test_dividefd_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(8.0, f.evaluate(x2/2, 4, 1), delta=1e-12)
    
