@@ -58,7 +58,16 @@
   def test_l2norm_(self):
    
    
-  
+  def test_displayString_(self):
+   
+   
+  def test_evaluate_(self):
+   x2 = f.xn(2)
+   y3 = f.yn(3)
+   self.assertAlmostEqual(31.0, f.evaluate(x2+y3, 2, 3), delta=1e-12)
+   
+  def test_composedFunction_(self):
+   
   
   def test_xn_(self):
    x2 = f.xn(2)
