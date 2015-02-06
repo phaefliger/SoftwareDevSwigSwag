@@ -39,3 +39,34 @@ class TestSpatialFilter(unittest.TestCase):
         y = sf.negatedFilter(x)
         xy = x & y
         self.assertEqual(xy, sf.negatedFilter(sf.allSpace()))
+
+    # matchingX
+    def testFunc_matchingX(self):
+        x = sf.matchingX(8.0)
+        self.assertEqual(True, x.matchesPoint(8.0, 24.0))
+
+     # matchingY
+    def testFunc_matchingY(self):
+        y = sf.matchingY(8.0)
+        self.assertEqual(True, y.matchesPoint(24.0, 8.0))
+
+    # lessThanX
+    def testFunc_lessThanX(self):
+        x = sf.lessThanX(8.0)
+        self.assertEqual(False, x.matchesPoint(8.1, 24.0))
+    
+    # lessThanY
+    def testFunc_lessThanY(self):
+        x = sf.lessThanY(8.0)
+        self.assertEqual(False, x.matchesPoint(24.0, 8.1))
+    
+    # greaterThanX
+    def testFunc_greaterThanX(self):
+        x = sf.greaterThanX(8.0)
+        self.assertEqual(True, x.matchesPoint(8.1, 24.0))
+    
+    # greaterThanY
+    def testFunc_greaterThanY(self):
+        x = sf.greaterThanY(8.0)
+        self.assertEqual(True, x.matchesPoint(24.0, 8.1))
+    
