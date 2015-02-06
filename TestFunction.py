@@ -44,6 +44,21 @@
    y4 = f.yn(4)
    v = f.vectorize(x2, y4)
    self.assertAlmostEqual(40.0, f.evaluate(v.div(), 4, 2), delta=1e-12)
+   
+  def test_grad_(self):
+   
+   
+  def test_rank_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertEqual(0, x2.rank())
+   self.assertEqual(1, v.rank())
+   
+  def test_l2norm_(self):
+   
+   
+  
   
   def test_xn_(self):
    x2 = f.xn(2)
