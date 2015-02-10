@@ -9,7 +9,7 @@
 
 class RHS {
  public:
-  RHS(bool legacySubclass); 
+  //RHS(bool legacySubclass); 
   RHS(){ // specification said Python interface would not require the legacy bool and always pass false
     return RHS(false);
   }

@@ -8,7 +8,7 @@ class TestRHS(unittest.TestCase):
 
     # constructors
     def test_RHS_(self):
-        self.assertEqual(rhs.RHS(), rhs.RHS(false))
+        self.assertEqual(rhs.RHS(), rhs.RHS())
         
     # --- not sure how RHS works, need more info to write tests for nonZeroRHS and addTerm
     
