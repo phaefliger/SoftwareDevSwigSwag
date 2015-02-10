@@ -9,10 +9,8 @@
 
 class RHS {
  public:
-  RHS(bool legacySubclass); 
-  /* RHS(){ // specification said Python interface would not require the legacy bool and always pass false */
-  /*   return RHS(false); */
-  /* } */
+  //RHS(bool legacySubclass); 
+  static RHSPtr rhs();
 
   bool nonZeroRHS(int testVarID);
   
@@ -22,9 +20,11 @@ class RHS {
   LinearTermPtr linearTerm();
   LinearTermPtr linearTermCopy();
 
-  /* %extend {
-    
-     }*/
+};
+
+class RHSPtr {
+ public:
+  RHS* operator->();
 };
 
 
