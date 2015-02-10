@@ -21,4 +21,10 @@ class RHS {
   
   LinearTermPtr linearTerm();
   LinearTermPtr linearTermCopy();
+
+  /* %extend {
+    
+     }*/
 };
+
+
