@@ -152,6 +152,47 @@ class MeshPtr(_object):
 MeshPtr_swigregister = _Function.MeshPtr_swigregister
 MeshPtr_swigregister(MeshPtr)
 
+HGRAD = _Function.HGRAD
+HCURL = _Function.HCURL
+HDIV = _Function.HDIV
+HGRAD_DISC = _Function.HGRAD_DISC
+HCURL_DISC = _Function.HCURL_DISC
+HDIV_DISC = _Function.HDIV_DISC
+HDIV_FREE = _Function.HDIV_FREE
+L2 = _Function.L2
+CONSTANT_SCALAR = _Function.CONSTANT_SCALAR
+VECTOR_HGRAD = _Function.VECTOR_HGRAD
+VECTOR_HGRAD_DISC = _Function.VECTOR_HGRAD_DISC
+VECTOR_L2 = _Function.VECTOR_L2
+UNKNOWN_FS = _Function.UNKNOWN_FS
+class Var(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Var, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Var, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _Function.delete_Var
+    __del__ = lambda self : None;
+Var_swigregister = _Function.Var_swigregister
+Var_swigregister(Var)
+
+class VarPtr(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, VarPtr, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, VarPtr, name)
+    __repr__ = _swig_repr
+    def __deref__(self): return _Function.VarPtr___deref__(self)
+    def __init__(self): 
+        this = _Function.new_VarPtr()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _Function.delete_VarPtr
+    __del__ = lambda self : None;
+VarPtr_swigregister = _Function.VarPtr_swigregister
+VarPtr_swigregister(VarPtr)
+
 class Function(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Function, name, value)
