@@ -1,0 +1,60 @@
+commit 1a7ab62290f3802b640c91afeb7610e4548a468f
+Author: sethwulbecker <seth.wulbecker@my.wheaton.edu>
+Date:   Wed Jan 28 18:59:33 2015 -0600
+
+    added to .i
+
+commit ce8bc1b0a7fe32c74c2a7b9d556e53d48b02f123
+Author: Connor de la Cruz <connor.delacruz@my.wheaton.edu>
+Date:   Tue Jan 27 12:48:35 2015 -0600
+
+    finished adding the methods to export to SpatialFilter
+
+commit 1152940d6337dbb2498c68d1bd9d6411623ca56c
+Author: Connor de la Cruz <connor.delacruz@my.wheaton.edu>
+Date:   Tue Jan 27 12:38:18 2015 -0600
+
+    Started work on SpatialFilter, uncommented from build.sh
+
+commit 13556b16723ca80cfcb7e3efa7a95b83a0005a72
+Author: Connor de la Cruz <connor.delacruz@my.wheaton.edu>
+Date:   Mon Jan 26 21:14:22 2015 -0600
+
+    added jeff
+
+commit fcff625b723a1fb46fae3648254542fd5ad0ee84
+Merge: 0364b59 4ce557b
+Author: Connor de la Cruz <connor.delacruz@my.wheaton.edu>
+Date:   Mon Jan 26 21:11:53 2015 -0600
+
+    Merge branch 'master' of https://github.com/phaefliger/SoftwareDevSwigSwag
+
+commit 4ce557be7441144e94e397af2eb57fabbd1ee733
+Author: Seth P. Wulbecker <seth.wulbecker@cslab18.wheaton.edu>
+Date:   Mon Jan 26 21:09:22 2015 -0600
+
+    All the stuff
+
+commit 0364b59ee768af01d3ae2c7fe5a07873e19d5f9b
+Author: Connor de la Cruz <connor.delacruz@my.wheaton.edu>
+Date:   Mon Jan 26 21:08:43 2015 -0600
+
+    I'm crying
+
+commit 23e6ad82a57eeb8ae5eb992fa57839537d50b033
+Author: Seth P. Wulbecker <seth.wulbecker@cslab18.wheaton.edu>
+Date:   Mon Jan 26 21:00:57 2015 -0600
+
+    dawg
+
+commit 91274b5c63ae66e1b7b6665afaf2557069e2021f
+Author: PAUL HAEFLIGER <paul.haefliger@cslab19.wheaton.edu>
+Date:   Mon Jan 26 20:59:15 2015 -0600
+
+    Yo
+
+commit aa876abfb441538543c9e3450c198d6d4acd7e61
+Author: Seth P. Wulbecker <seth.wulbecker@cslab18.wheaton.edu>
+Date:   Mon Jan 26 20:45:46 2015 -0600
+
+    first commit

@@ -1,0 +1,5 @@
+%module RHS
+%{
+#include "RHS.h"
+ %}
+
