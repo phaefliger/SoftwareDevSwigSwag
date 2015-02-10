@@ -2943,18 +2943,17 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_Mesh swig_types[3]
 #define SWIGTYPE_p_MeshPtr swig_types[4]
 #define SWIGTYPE_p_SolutionPtr swig_types[5]
-#define SWIGTYPE_p_Var swig_types[6]
-#define SWIGTYPE_p_VarPtr swig_types[7]
-#define SWIGTYPE_p_char swig_types[8]
-#define SWIGTYPE_p_setT_GlobalIndexType_t swig_types[9]
-#define SWIGTYPE_p_std__invalid_argument swig_types[10]
-#define SWIGTYPE_p_string swig_types[11]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[12]
-#define SWIGTYPE_p_vectorT_double_t swig_types[13]
-#define SWIGTYPE_p_vectorT_unsigned_int_t swig_types[14]
-#define SWIGTYPE_p_vectorT_vectorT_double_t_t swig_types[15]
-static swig_type_info *swig_types[17];
-static swig_module_info swig_module = {swig_types, 16, 0, 0, 0, 0};
+#define SWIGTYPE_p_VarPtr swig_types[6]
+#define SWIGTYPE_p_char swig_types[7]
+#define SWIGTYPE_p_setT_GlobalIndexType_t swig_types[8]
+#define SWIGTYPE_p_std__invalid_argument swig_types[9]
+#define SWIGTYPE_p_string swig_types[10]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[11]
+#define SWIGTYPE_p_vectorT_double_t swig_types[12]
+#define SWIGTYPE_p_vectorT_unsigned_int_t swig_types[13]
+#define SWIGTYPE_p_vectorT_vectorT_double_t_t swig_types[14]
+static swig_type_info *swig_types[16];
+static swig_module_info swig_module = {swig_types, 15, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3441,9 +3440,6 @@ SWIGINTERNINLINE PyObject*
 {
   return PyInt_FromLong((long) value);
 }
-
-
-#include "Var.h"
 
 
 SWIGINTERN swig_type_info*
@@ -5284,97 +5280,6 @@ SWIGINTERN PyObject *MeshPtr_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObje
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_MeshPtr, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_delete_Var(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Var *arg1 = (Var *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_Var",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Var, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Var" "', argument " "1"" of type '" "Var *""'"); 
-  }
-  arg1 = reinterpret_cast< Var * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *Var_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_Var, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_VarPtr___deref__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  VarPtr *arg1 = (VarPtr *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  Var *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:VarPtr___deref__",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VarPtr, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VarPtr___deref__" "', argument " "1"" of type '" "VarPtr *""'"); 
-  }
-  arg1 = reinterpret_cast< VarPtr * >(argp1);
-  result = (Var *)(arg1)->operator ->();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Var, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_VarPtr(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  VarPtr *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_VarPtr")) SWIG_fail;
-  result = (VarPtr *)new VarPtr();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_VarPtr, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_VarPtr(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  VarPtr *arg1 = (VarPtr *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_VarPtr",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VarPtr, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_VarPtr" "', argument " "1"" of type '" "VarPtr *""'"); 
-  }
-  arg1 = reinterpret_cast< VarPtr * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *VarPtr_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_VarPtr, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -8224,12 +8129,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"MeshPtr_vertexIndicesForCell", _wrap_MeshPtr_vertexIndicesForCell, METH_VARARGS, NULL},
 	 { (char *)"MeshPtr_verticesForCell", _wrap_MeshPtr_verticesForCell, METH_VARARGS, NULL},
 	 { (char *)"MeshPtr_swigregister", MeshPtr_swigregister, METH_VARARGS, NULL},
-	 { (char *)"delete_Var", _wrap_delete_Var, METH_VARARGS, NULL},
-	 { (char *)"Var_swigregister", Var_swigregister, METH_VARARGS, NULL},
-	 { (char *)"VarPtr___deref__", _wrap_VarPtr___deref__, METH_VARARGS, NULL},
-	 { (char *)"new_VarPtr", _wrap_new_VarPtr, METH_VARARGS, NULL},
-	 { (char *)"delete_VarPtr", _wrap_delete_VarPtr, METH_VARARGS, NULL},
-	 { (char *)"VarPtr_swigregister", VarPtr_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Function_displayString", _wrap_Function_displayString, METH_VARARGS, NULL},
 	 { (char *)"Function_x", _wrap_Function_x, METH_VARARGS, NULL},
 	 { (char *)"Function_y", _wrap_Function_y, METH_VARARGS, NULL},
@@ -8293,7 +8192,6 @@ static swig_type_info _swigt__p_GlobalIndexType = {"_p_GlobalIndexType", "Global
 static swig_type_info _swigt__p_Mesh = {"_p_Mesh", "Mesh *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MeshPtr = {"_p_MeshPtr", "MeshPtr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SolutionPtr = {"_p_SolutionPtr", "SolutionPtr *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Var = {"_p_Var", "Var *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_VarPtr = {"_p_VarPtr", "VarPtr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_setT_GlobalIndexType_t = {"_p_setT_GlobalIndexType_t", "set< GlobalIndexType > *", 0, 0, (void*)0, 0};
@@ -8311,7 +8209,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Mesh,
   &_swigt__p_MeshPtr,
   &_swigt__p_SolutionPtr,
-  &_swigt__p_Var,
   &_swigt__p_VarPtr,
   &_swigt__p_char,
   &_swigt__p_setT_GlobalIndexType_t,
@@ -8329,7 +8226,6 @@ static swig_cast_info _swigc__p_GlobalIndexType[] = {  {&_swigt__p_GlobalIndexTy
 static swig_cast_info _swigc__p_Mesh[] = {  {&_swigt__p_Mesh, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MeshPtr[] = {  {&_swigt__p_MeshPtr, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SolutionPtr[] = {  {&_swigt__p_SolutionPtr, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Var[] = {  {&_swigt__p_Var, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_VarPtr[] = {  {&_swigt__p_VarPtr, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_setT_GlobalIndexType_t[] = {  {&_swigt__p_setT_GlobalIndexType_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -8347,7 +8243,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Mesh,
   _swigc__p_MeshPtr,
   _swigc__p_SolutionPtr,
-  _swigc__p_Var,
   _swigc__p_VarPtr,
   _swigc__p_char,
   _swigc__p_setT_GlobalIndexType_t,
@@ -9041,19 +8936,6 @@ SWIG_init(void) {
   
   SWIG_InstallConstants(d,swig_const_table);
   
-  SWIG_Python_SetConstant(d, "HGRAD",SWIG_From_int(static_cast< int >(Camellia::HGRAD)));
-  SWIG_Python_SetConstant(d, "HCURL",SWIG_From_int(static_cast< int >(Camellia::HCURL)));
-  SWIG_Python_SetConstant(d, "HDIV",SWIG_From_int(static_cast< int >(Camellia::HDIV)));
-  SWIG_Python_SetConstant(d, "HGRAD_DISC",SWIG_From_int(static_cast< int >(Camellia::HGRAD_DISC)));
-  SWIG_Python_SetConstant(d, "HCURL_DISC",SWIG_From_int(static_cast< int >(Camellia::HCURL_DISC)));
-  SWIG_Python_SetConstant(d, "HDIV_DISC",SWIG_From_int(static_cast< int >(Camellia::HDIV_DISC)));
-  SWIG_Python_SetConstant(d, "HDIV_FREE",SWIG_From_int(static_cast< int >(Camellia::HDIV_FREE)));
-  SWIG_Python_SetConstant(d, "L2",SWIG_From_int(static_cast< int >(Camellia::L2)));
-  SWIG_Python_SetConstant(d, "CONSTANT_SCALAR",SWIG_From_int(static_cast< int >(Camellia::CONSTANT_SCALAR)));
-  SWIG_Python_SetConstant(d, "VECTOR_HGRAD",SWIG_From_int(static_cast< int >(Camellia::VECTOR_HGRAD)));
-  SWIG_Python_SetConstant(d, "VECTOR_HGRAD_DISC",SWIG_From_int(static_cast< int >(Camellia::VECTOR_HGRAD_DISC)));
-  SWIG_Python_SetConstant(d, "VECTOR_L2",SWIG_From_int(static_cast< int >(Camellia::VECTOR_L2)));
-  SWIG_Python_SetConstant(d, "UNKNOWN_FS",SWIG_From_int(static_cast< int >(Camellia::UNKNOWN_FS)));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else
