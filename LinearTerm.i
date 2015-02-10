@@ -9,9 +9,7 @@
 %nodefaultctor LinearTerm;  // Disable the default constructor for class LinearTerm                                                                                                  
 
 class LinearTerm {
-public:
-  LinearTerm(); //Constructor                                                                                                                                                        
-
+public:                                                                                                                                                       
   const set<int> & varIDs();
 
   VarType termType();
@@ -59,9 +57,9 @@ public:
     LinearTermPtr __mul__(VarPtr v, vector<double> weight){
       return weight * v;
     }
-    LinearTermPtr __rmul__(FunctionPtr f){
-      return *self * f;
-    }
+    /* LinearTermPtr __rmul__(FunctionPtr f){ */
+    /*   return *self * f; */
+    /* } */
     LinearTermPtr __add__(VarPtr v1, VarPtr v2){
       return v1 + v2;
     }
@@ -75,7 +73,7 @@ public:
       return v1 -v2;
     }
     LinearTermPtr __neg__(VarPtr v){
-      return -v1;
+      return -v;
     }
     LinearTermPtr __neg__(LinearTermPtr a){
       return -a;
