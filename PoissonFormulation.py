@@ -15,20 +15,20 @@ if version_info >= (2,6,0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_VarFactory', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_PoissonFormulation', [dirname(__file__)])
         except ImportError:
-            import _VarFactory
-            return _VarFactory
+            import _PoissonFormulation
+            return _PoissonFormulation
         if fp is not None:
             try:
-                _mod = imp.load_module('_VarFactory', fp, pathname, description)
+                _mod = imp.load_module('_PoissonFormulation', fp, pathname, description)
             finally:
                 fp.close()
             return _mod
-    _VarFactory = swig_import_helper()
+    _PoissonFormulation = swig_import_helper()
     del swig_import_helper
 else:
-    import _VarFactory
+    import _PoissonFormulation
 del version_info
 try:
     _swig_property = property
@@ -69,31 +69,27 @@ except AttributeError:
     _newclass = 0
 
 
-class VarFactory(_object):
+class PoissonFormulation(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, VarFactory, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PoissonFormulation, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, VarFactory, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, PoissonFormulation, name)
     __repr__ = _swig_repr
-    def __init__(self): 
-        this = _VarFactory.new_VarFactory()
+    def __init__(self, *args): 
+        this = _PoissonFormulation.new_PoissonFormulation(*args)
         try: self.this.append(this)
         except: self.this = this
-    def fluxVar(self, *args): return _VarFactory.VarFactory_fluxVar(self, *args)
-    def test(self, *args): return _VarFactory.VarFactory_test(self, *args)
-    def trial(self, *args): return _VarFactory.VarFactory_trial(self, *args)
-    def testIDs(self): return _VarFactory.VarFactory_testIDs(self)
-    def trialIDs(self): return _VarFactory.VarFactory_trialIDs(self)
-    def fieldVars(self): return _VarFactory.VarFactory_fieldVars(self)
-    def fluxVars(self): return _VarFactory.VarFactory_fluxVars(self)
-    def traceVars(self): return _VarFactory.VarFactory_traceVars(self)
-    def testVar(self, *args): return _VarFactory.VarFactory_testVar(self, *args)
-    def fieldVar(self, *args): return _VarFactory.VarFactory_fieldVar(self, *args)
-    def traceVar(self, *args): return _VarFactory.VarFactory_traceVar(self, *args)
-    __swig_destroy__ = _VarFactory.delete_VarFactory
+    def bf(self): return _PoissonFormulation.PoissonFormulation_bf(self)
+    def phi(self): return _PoissonFormulation.PoissonFormulation_phi(self)
+    def psi(self): return _PoissonFormulation.PoissonFormulation_psi(self)
+    def psi_n_hat(self): return _PoissonFormulation.PoissonFormulation_psi_n_hat(self)
+    def phi_hat(self): return _PoissonFormulation.PoissonFormulation_phi_hat(self)
+    def q(self): return _PoissonFormulation.PoissonFormulation_q(self)
+    def tau(self): return _PoissonFormulation.PoissonFormulation_tau(self)
+    __swig_destroy__ = _PoissonFormulation.delete_PoissonFormulation
     __del__ = lambda self : None;
-VarFactory_swigregister = _VarFactory.VarFactory_swigregister
-VarFactory_swigregister(VarFactory)
+PoissonFormulation_swigregister = _PoissonFormulation.PoissonFormulation_swigregister
+PoissonFormulation_swigregister(PoissonFormulation)
 
 # This file is compatible with both classic and new-style classes.
 

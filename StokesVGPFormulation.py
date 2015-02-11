@@ -15,20 +15,20 @@ if version_info >= (2,6,0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_VarFactory', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_StokesVGPFormulation', [dirname(__file__)])
         except ImportError:
-            import _VarFactory
-            return _VarFactory
+            import _StokesVGPFormulation
+            return _StokesVGPFormulation
         if fp is not None:
             try:
-                _mod = imp.load_module('_VarFactory', fp, pathname, description)
+                _mod = imp.load_module('_StokesVGPFormulation', fp, pathname, description)
             finally:
                 fp.close()
             return _mod
-    _VarFactory = swig_import_helper()
+    _StokesVGPFormulation = swig_import_helper()
     del swig_import_helper
 else:
-    import _VarFactory
+    import _StokesVGPFormulation
 del version_info
 try:
     _swig_property = property
@@ -69,31 +69,28 @@ except AttributeError:
     _newclass = 0
 
 
-class VarFactory(_object):
+class StokesVGPFormulation(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, VarFactory, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StokesVGPFormulation, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, VarFactory, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, StokesVGPFormulation, name)
     __repr__ = _swig_repr
-    def __init__(self): 
-        this = _VarFactory.new_VarFactory()
+    def __init__(self, *args): 
+        this = _StokesVGPFormulation.new_StokesVGPFormulation(*args)
         try: self.this.append(this)
         except: self.this = this
-    def fluxVar(self, *args): return _VarFactory.VarFactory_fluxVar(self, *args)
-    def test(self, *args): return _VarFactory.VarFactory_test(self, *args)
-    def trial(self, *args): return _VarFactory.VarFactory_trial(self, *args)
-    def testIDs(self): return _VarFactory.VarFactory_testIDs(self)
-    def trialIDs(self): return _VarFactory.VarFactory_trialIDs(self)
-    def fieldVars(self): return _VarFactory.VarFactory_fieldVars(self)
-    def fluxVars(self): return _VarFactory.VarFactory_fluxVars(self)
-    def traceVars(self): return _VarFactory.VarFactory_traceVars(self)
-    def testVar(self, *args): return _VarFactory.VarFactory_testVar(self, *args)
-    def fieldVar(self, *args): return _VarFactory.VarFactory_fieldVar(self, *args)
-    def traceVar(self, *args): return _VarFactory.VarFactory_traceVar(self, *args)
-    __swig_destroy__ = _VarFactory.delete_VarFactory
+    def bf(self): return _StokesVGPFormulation.StokesVGPFormulation_bf(self)
+    def sigma(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_sigma(self, *args)
+    def u(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_u(self, *args)
+    def p(self): return _StokesVGPFormulation.StokesVGPFormulation_p(self)
+    def tn_hat(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_tn_hat(self, *args)
+    def u_hat(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_u_hat(self, *args)
+    def tau(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_tau(self, *args)
+    def v(self, *args): return _StokesVGPFormulation.StokesVGPFormulation_v(self, *args)
+    __swig_destroy__ = _StokesVGPFormulation.delete_StokesVGPFormulation
     __del__ = lambda self : None;
-VarFactory_swigregister = _VarFactory.VarFactory_swigregister
-VarFactory_swigregister(VarFactory)
+StokesVGPFormulation_swigregister = _StokesVGPFormulation.StokesVGPFormulation_swigregister
+StokesVGPFormulation_swigregister(StokesVGPFormulation)
 
 # This file is compatible with both classic and new-style classes.
 
