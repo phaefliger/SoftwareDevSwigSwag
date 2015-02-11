@@ -46,7 +46,11 @@
    self.assertAlmostEqual(40.0, f.evaluate(v.div(), 4, 2), delta=1e-12)
    
   def test_grad_(self):
-   
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertEqual("(2 \\cdot x,0)", v.grad().x().displayString())
+   self.assertEqual("(0,4 \\cdot y^3)", v.grad().y().displayString())
    
   def test_rank_(self):
    x2 = f.xn(2)
@@ -59,7 +63,12 @@
    
    
   def test_displayString_(self):
-   
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertEqual("x^2", x2.displayString())
+   self.assertEqual("y^4", y4.displayString())
+   self.assertEqual("(x^2,y^4)", v.displayString())
    
   def test_evaluate_(self):
    x2 = f.xn(2)
@@ -70,13 +79,17 @@
    
    
   def test_constant_(self):
-   
+   self.assertEqual("7", f.constant(7).displayString())
    
   def test_vectorize_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   v = f.vectorize(x2, y4)
+   self.assertEqual("x^2", v.x().displayString())
+   self.assertEqual("y^4", v.y().displayString())
    
-   
-  def test_normal_(self):
-   
+  #Told NOT to test!!
+  #def test_normal_(self):
    
   def test_solution(self):
    
@@ -90,12 +103,12 @@
    y2 = f.yn(2)
    self.assertAlmostEqual(25.0, f.evaluate(y2, 1, 5), delta=1e-12)
    
-  def test_mult2F_(self):
+  def test_multFF_(self):
    x2 = f.xn(2)
    y2 = f.yn(2)
    self.assertAlmostEqual(36.0, f.evaluate(x2*y2, 2, 3), delta=1e-12)
    
-  def test_divide2F_(self):
+  def test_divideFF_(self):
    x2 = f.xn(2)
    y2 = f.yn(2)
    self.assertAlmostEqual(4.0, f.evaluate(x2/y2, 4, 2), delta=1e-12)
@@ -116,5 +129,40 @@
    x2 = f.xn(2)
    self.assertAlmostEqual(50.0, f.evaluate(x2*2, 5, 1), delta=1e-12)
    
+  def test_multVF_(self):
+   
+   
+  def test_multFV_(self):
+   
+   
+  def test_addFF_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   self.assertAlmostEqual(32.0, f.evaluate(x2+y4, 4, 2), delta=1e-12)
+   
+  def test_addFD_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(19.0, f.evaluate(x2+3, 4, 2), delta=1e-12)
+   
+  def test_addDF_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(27.0, f.evaluate(2+x2, 5, 2), delta=1e-12)
+   
+  def test_minFF_(self):
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   self.assertAlmostEqual(0.0, f.evaluate(x2-y4, 4, 2), delta=1e-12)
+   
+  def test_minFD_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(47.0, f.evaluate(x2-2, 7, 2), delta=1e-12)
+   
+  def test_minDF_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(25.0, f.evaluate(50-x2, 5, 2), delta=1e-12)
+   
+  def test_neg_(self):
+   x2 = f.xn(2)
+   self.assertAlmostEqual(-25.0, f.evaluate(-x2, 5, 2), delta=1e-12)
   
    
