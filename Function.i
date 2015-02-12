@@ -6,6 +6,7 @@
 %include "std_string.i"
 %include "std_vector.i"
 %include "Mesh.i"
+%include “Solution.i”
 
 %nodefaultctor Function;  // Disable the default constructor for class Function
 
