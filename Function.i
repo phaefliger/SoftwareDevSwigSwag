@@ -98,7 +98,7 @@ public:
       return *self * weight;
     }
     FunctionPtr __rmul__(vector<double> weight) {
-      return weight * *self;
+      return weight[0] * *self.x() + weight[1] * *self.y();
     }
     FunctionPtr __neg__() {
       return -1 * *self;
