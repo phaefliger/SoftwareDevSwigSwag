@@ -98,6 +98,100 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _MeshFactory.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
+class IntVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IntVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _MeshFactory.IntVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _MeshFactory.IntVector___nonzero__(self)
+    def __bool__(self): return _MeshFactory.IntVector___bool__(self)
+    def __len__(self): return _MeshFactory.IntVector___len__(self)
+    def pop(self): return _MeshFactory.IntVector_pop(self)
+    def __getslice__(self, *args): return _MeshFactory.IntVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _MeshFactory.IntVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _MeshFactory.IntVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _MeshFactory.IntVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _MeshFactory.IntVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _MeshFactory.IntVector___setitem__(self, *args)
+    def append(self, *args): return _MeshFactory.IntVector_append(self, *args)
+    def empty(self): return _MeshFactory.IntVector_empty(self)
+    def size(self): return _MeshFactory.IntVector_size(self)
+    def clear(self): return _MeshFactory.IntVector_clear(self)
+    def swap(self, *args): return _MeshFactory.IntVector_swap(self, *args)
+    def get_allocator(self): return _MeshFactory.IntVector_get_allocator(self)
+    def begin(self): return _MeshFactory.IntVector_begin(self)
+    def end(self): return _MeshFactory.IntVector_end(self)
+    def rbegin(self): return _MeshFactory.IntVector_rbegin(self)
+    def rend(self): return _MeshFactory.IntVector_rend(self)
+    def pop_back(self): return _MeshFactory.IntVector_pop_back(self)
+    def erase(self, *args): return _MeshFactory.IntVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _MeshFactory.new_IntVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _MeshFactory.IntVector_push_back(self, *args)
+    def front(self): return _MeshFactory.IntVector_front(self)
+    def back(self): return _MeshFactory.IntVector_back(self)
+    def assign(self, *args): return _MeshFactory.IntVector_assign(self, *args)
+    def resize(self, *args): return _MeshFactory.IntVector_resize(self, *args)
+    def insert(self, *args): return _MeshFactory.IntVector_insert(self, *args)
+    def reserve(self, *args): return _MeshFactory.IntVector_reserve(self, *args)
+    def capacity(self): return _MeshFactory.IntVector_capacity(self)
+    __swig_destroy__ = _MeshFactory.delete_IntVector
+    __del__ = lambda self : None;
+IntVector_swigregister = _MeshFactory.IntVector_swigregister
+IntVector_swigregister(IntVector)
+
+class DoubleVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DoubleVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _MeshFactory.DoubleVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _MeshFactory.DoubleVector___nonzero__(self)
+    def __bool__(self): return _MeshFactory.DoubleVector___bool__(self)
+    def __len__(self): return _MeshFactory.DoubleVector___len__(self)
+    def pop(self): return _MeshFactory.DoubleVector_pop(self)
+    def __getslice__(self, *args): return _MeshFactory.DoubleVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _MeshFactory.DoubleVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _MeshFactory.DoubleVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _MeshFactory.DoubleVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _MeshFactory.DoubleVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _MeshFactory.DoubleVector___setitem__(self, *args)
+    def append(self, *args): return _MeshFactory.DoubleVector_append(self, *args)
+    def empty(self): return _MeshFactory.DoubleVector_empty(self)
+    def size(self): return _MeshFactory.DoubleVector_size(self)
+    def clear(self): return _MeshFactory.DoubleVector_clear(self)
+    def swap(self, *args): return _MeshFactory.DoubleVector_swap(self, *args)
+    def get_allocator(self): return _MeshFactory.DoubleVector_get_allocator(self)
+    def begin(self): return _MeshFactory.DoubleVector_begin(self)
+    def end(self): return _MeshFactory.DoubleVector_end(self)
+    def rbegin(self): return _MeshFactory.DoubleVector_rbegin(self)
+    def rend(self): return _MeshFactory.DoubleVector_rend(self)
+    def pop_back(self): return _MeshFactory.DoubleVector_pop_back(self)
+    def erase(self, *args): return _MeshFactory.DoubleVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _MeshFactory.new_DoubleVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _MeshFactory.DoubleVector_push_back(self, *args)
+    def front(self): return _MeshFactory.DoubleVector_front(self)
+    def back(self): return _MeshFactory.DoubleVector_back(self)
+    def assign(self, *args): return _MeshFactory.DoubleVector_assign(self, *args)
+    def resize(self, *args): return _MeshFactory.DoubleVector_resize(self, *args)
+    def insert(self, *args): return _MeshFactory.DoubleVector_insert(self, *args)
+    def reserve(self, *args): return _MeshFactory.DoubleVector_reserve(self, *args)
+    def capacity(self): return _MeshFactory.DoubleVector_capacity(self)
+    __swig_destroy__ = _MeshFactory.delete_DoubleVector
+    __del__ = lambda self : None;
+DoubleVector_swigregister = _MeshFactory.DoubleVector_swigregister
+DoubleVector_swigregister(DoubleVector)
+
 class MeshFactory(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, MeshFactory, name, value)
