@@ -106,7 +106,15 @@
   #def test_normal_(self):
    
   def test_solution(self):
-   
+   vf = VarFactory.VarFactory()
+   p = vf.fieldVar("p")
+   v = vf.testVar("v", Var.HGRAD)
+   b = BF.BF_bf(vf)
+   mp = MeshFactory.MeshFactory_rectilinearMesh(b, [1.0, 1.0], [1, 1], 2)
+   soln = Solution.Solution_solution(mp)
+   x2 = f.xn(2)
+   soln.projectOntoMesh({p.ID() : x2})
+   g = f.solution(p, soln)
    
   
   def test_xn_(self):
