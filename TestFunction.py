@@ -13,6 +13,10 @@
  # unittest.main()
  
  import Function
+ import VarFactory
+ import Var
+ import BF
+ import MeshFactory
  import unittest
  
  class TestFunction(unittest.TestCase):
@@ -60,7 +64,17 @@
    self.assertEqual(1, v.rank())
    
   def test_l2norm_(self):
-   
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   g = f.vectorize(x2, y4)
+   vf = VarFactory.VarFactory()
+   p = vf.fieldVar("p")
+   v = vf.testVar("v", Var.HGRAD)
+   b = BF.BF_bf(vf)
+   mp = MeshFactory.MeshFactory_rectilinearMesh(b, [1.0, 1.0], [1, 1], 2)
+   self.assertAlmostEqual(0.44721359549995804, x2.l2norm(mp, 0))
+   self.assertAlmostEqual(0.3293301281895316, y4.l2norm(mp, 0))
+   self.assertAlmostEqual(0.5553902531853916, g.l2norm(mp, 0))
    
   def test_displayString_(self):
    x2 = f.xn(2)
