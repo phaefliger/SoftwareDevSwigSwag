@@ -72,9 +72,9 @@
    v = vf.testVar("v", Var.HGRAD)
    b = BF.BF_bf(vf)
    mp = MeshFactory.MeshFactory_rectilinearMesh(b, [1.0, 1.0], [1, 1], 2)
-   self.assertAlmostEqual(0.44721359549995804, x2.l2norm(mp, 0))
-   self.assertAlmostEqual(0.3293301281895316, y4.l2norm(mp, 0))
-   self.assertAlmostEqual(0.5553902531853916, g.l2norm(mp, 0))
+   self.assertAlmostEqual(0.44721359549995804, x2.l2norm(mp, 0), delta=1e-12))
+   self.assertAlmostEqual(0.3293301281895316, y4.l2norm(mp, 0), delta=1e-12))
+   self.assertAlmostEqual(0.5553902531853916, g.l2norm(mp, 0), delta=1e-12))
    
   def test_displayString_(self):
    x2 = f.xn(2)
@@ -90,7 +90,9 @@
    self.assertAlmostEqual(31.0, f.evaluate(x2+y3, 2, 3), delta=1e-12)
    
   def test_composedFunction_(self):
-   
+   h = 3*f.xn(2) + 5*f.yn(1)
+   g = f.vectorize(3*f.yn(1), 2*f.xn(1) + 3)
+   self.assertAlmostEqual(153.0, f.evaluate(f.composedFunction(h, g), 3, 2), delta=1e-12)
    
   def test_constant_(self):
    self.assertEqual("7", f.constant(7).displayString())
@@ -112,9 +114,9 @@
    b = BF.BF_bf(vf)
    mp = MeshFactory.MeshFactory_rectilinearMesh(b, [1.0, 1.0], [1, 1], 2)
    soln = Solution.Solution_solution(mp)
-   x2 = f.xn(2)
-   soln.projectOntoMesh({p.ID() : x2})
+   soln.projectOntoMesh({p.ID() : f.xn(500)})
    g = f.solution(p, soln)
+   self.assertAlmostEqual(0.0, f.xn(500).l2norm(mp, 0) - g.l2norm(mp, 0), delta=1e-12)
    
   
   def test_xn_(self):
