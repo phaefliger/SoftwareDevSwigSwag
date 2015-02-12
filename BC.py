@@ -69,14 +69,126 @@ except AttributeError:
     _newclass = 0
 
 
+class pairi(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, pairi, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, pairi, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _BC.new_pairi(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _BC.pairi_first_set
+    __swig_getmethods__["first"] = _BC.pairi_first_get
+    if _newclass:first = _swig_property(_BC.pairi_first_get, _BC.pairi_first_set)
+    __swig_setmethods__["second"] = _BC.pairi_second_set
+    __swig_getmethods__["second"] = _BC.pairi_second_get
+    if _newclass:second = _swig_property(_BC.pairi_second_get, _BC.pairi_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _BC.delete_pairi
+    __del__ = lambda self : None;
+pairi_swigregister = _BC.pairi_swigregister
+pairi_swigregister(pairi)
+
+class paird(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, paird, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, paird, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _BC.new_paird(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _BC.paird_first_set
+    __swig_getmethods__["first"] = _BC.paird_first_get
+    if _newclass:first = _swig_property(_BC.paird_first_get, _BC.paird_first_set)
+    __swig_setmethods__["second"] = _BC.paird_second_set
+    __swig_getmethods__["second"] = _BC.paird_second_get
+    if _newclass:second = _swig_property(_BC.paird_second_get, _BC.paird_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _BC.delete_paird
+    __del__ = lambda self : None;
+paird_swigregister = _BC.paird_swigregister
+paird_swigregister(paird)
+
+class pairs(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, pairs, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, pairs, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _BC.new_pairs(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_setmethods__["first"] = _BC.pairs_first_set
+    __swig_getmethods__["first"] = _BC.pairs_first_get
+    if _newclass:first = _swig_property(_BC.pairs_first_get, _BC.pairs_first_set)
+    __swig_setmethods__["second"] = _BC.pairs_second_set
+    __swig_getmethods__["second"] = _BC.pairs_second_get
+    if _newclass:second = _swig_property(_BC.pairs_second_get, _BC.pairs_second_set)
+    def __len__(self): return 2
+    def __repr__(self): return str((self.first, self.second))
+    def __getitem__(self, index): 
+      if not (index % 2): 
+        return self.first
+      else:
+        return self.second
+    def __setitem__(self, index, val):
+      if not (index % 2): 
+        self.first = val
+      else:
+        self.second = val
+    __swig_destroy__ = _BC.delete_pairs
+    __del__ = lambda self : None;
+pairs_swigregister = _BC.pairs_swigregister
+pairs_swigregister(pairs)
+
 class BC(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, BC, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, BC, name)
-    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _BC.new_BC(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def bcsImposed(self, *args): return _BC.BC_bcsImposed(self, *args)
+    def singlePointBC(self, *args): return _BC.BC_singlePointBC(self, *args)
+    def valueForSinglePointBC(self, *args): return _BC.BC_valueForSinglePointBC(self, *args)
+    def vertexForSinglePointBC(self, *args): return _BC.BC_vertexForSinglePointBC(self, *args)
+    def imposeZeroMeanConstraint(self, *args): return _BC.BC_imposeZeroMeanConstraint(self, *args)
     def addDirichlet(self, *args): return _BC.BC_addDirichlet(self, *args)
+    def addSinglePointBC(self, *args): return _BC.BC_addSinglePointBC(self, *args)
+    def addZeroMeanConstraint(self, *args): return _BC.BC_addZeroMeanConstraint(self, *args)
+    def removeZeroMeanConstraint(self, *args): return _BC.BC_removeZeroMeanConstraint(self, *args)
+    def getDirichletBC(self, *args): return _BC.BC_getDirichletBC(self, *args)
+    def getSpatiallyFilteredFunctionForDirichletBC(self, *args): return _BC.BC_getSpatiallyFilteredFunctionForDirichletBC(self, *args)
     __swig_getmethods__["bc"] = lambda x: _BC.BC_bc
     if _newclass:bc = staticmethod(_BC.BC_bc)
     __swig_destroy__ = _BC.delete_BC
@@ -101,7 +213,17 @@ class BCPtr(_object):
         except: self.this = this
     __swig_destroy__ = _BC.delete_BCPtr
     __del__ = lambda self : None;
+    def bcsImposed(self, *args): return _BC.BCPtr_bcsImposed(self, *args)
+    def singlePointBC(self, *args): return _BC.BCPtr_singlePointBC(self, *args)
+    def valueForSinglePointBC(self, *args): return _BC.BCPtr_valueForSinglePointBC(self, *args)
+    def vertexForSinglePointBC(self, *args): return _BC.BCPtr_vertexForSinglePointBC(self, *args)
+    def imposeZeroMeanConstraint(self, *args): return _BC.BCPtr_imposeZeroMeanConstraint(self, *args)
     def addDirichlet(self, *args): return _BC.BCPtr_addDirichlet(self, *args)
+    def addSinglePointBC(self, *args): return _BC.BCPtr_addSinglePointBC(self, *args)
+    def addZeroMeanConstraint(self, *args): return _BC.BCPtr_addZeroMeanConstraint(self, *args)
+    def removeZeroMeanConstraint(self, *args): return _BC.BCPtr_removeZeroMeanConstraint(self, *args)
+    def getDirichletBC(self, *args): return _BC.BCPtr_getDirichletBC(self, *args)
+    def getSpatiallyFilteredFunctionForDirichletBC(self, *args): return _BC.BCPtr_getSpatiallyFilteredFunctionForDirichletBC(self, *args)
     def bc(self): return _BC.BCPtr_bc(self)
 BCPtr_swigregister = _BC.BCPtr_swigregister
 BCPtr_swigregister(BCPtr)
