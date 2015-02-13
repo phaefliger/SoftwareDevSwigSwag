@@ -11,15 +11,15 @@
 # Run the tests:
 #if (__name__ == '__main__'):
  # unittest.main()
- 
- import Function
- import VarFactory
+import Function
+import VarFactory
  import Var
- mport BF
+ import BF
  import MeshFactory
  import unittest
- 
- class TestFunction(unittest.TestCase):
+
+
+class TestFunction(unittest.TestCase):
   
   f = Function.Function
   
