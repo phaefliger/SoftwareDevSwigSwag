@@ -29,9 +29,9 @@ class TestFunction(unittest.TestCase):
    
   def test_Rank_(self):
    var1 = myFactory.testVar("Test", HGRAD)
-   x2 = f.xn(2)
-   y4 = f.yn(4)
-   v = f.vectorize(x2, y4)
+   x2 = Function.Function_xn(2)
+   y4 = Function.Function_yn(4)
+   v = Function.Function_vectorize(x2, y4)
    lt1 = x2*var1
    lt2 = v*var1
    self.assertEqual(0, lt1.rank())
