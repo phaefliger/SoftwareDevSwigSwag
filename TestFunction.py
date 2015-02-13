@@ -13,11 +13,10 @@
  # unittest.main()
 import Function
 import VarFactory
- import Var
- import BF
- import MeshFactory
- import unittest
-
+import Var
+import BF
+import MeshFactory
+import unittest
 
 class TestFunction(unittest.TestCase):
   
