@@ -27,15 +27,15 @@ class TestFunction(unittest.TestCase):
    self.assertEqual(lt.displayString(), 'x + y'
     
    
-  def test_Rank_(self):
-   var1 = myFactory.fieldVar("Test")
-   x2 = Function.Function.xn(2)
-   y4 = Function.Function.yn(4)
-   v = Function.Function.vectorize(x2, y4)
-   lt1 = x2*var1
-   lt2 = v*var1
-   self.assertEqual(0, lt1.rank())
-   self.assertEqual(1, lt2.rank())
+  #def test_Rank_(self):
+   #var1 = myFactory.fieldVar("Test")
+   #x2 = Function.Function.xn(2)
+   #y4 = Function.Function.yn(4)
+   #v = Function.Function.vectorize(x2, y4)
+   #lt1 = x2*var1
+   #lt2 = v*var1
+   #self.assertEqual(0, lt1.rank())
+   #self.assertEqual(1, lt2.rank())
    
   def test_termType_(self):
    var1 = myFactory.testVar("Test", HGRAD)
