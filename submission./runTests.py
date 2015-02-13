@@ -9,9 +9,15 @@
 #testRunner.run(testSuite)
 
 from TestFunction import *
+from TestLinearTerm import *
+from TestSpatialFilter import *
+from TestRHS import *
 import unittest
 
 testSuite = unittest.makeSuite(TestFunction)
+testSuite.addTest(unittest.makeSuite(TestLinearTerm))
+testSuite.addTest(unittest.makeSuite(TestSpatialFilter))
+testSuite.addTest(unittest.makeSuite(TestRHS))
 
 testRunner = unittest.TextTestRunner()
 testRunner.run(testSuite)
