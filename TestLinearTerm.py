@@ -13,7 +13,7 @@ class TestFunction(unittest.TestCase):
   var3 = myFactory.fieldVar("x^2")
   var4 = myFactory.fieldVar("y^3")
   ltMain = var1 + var2
-  varFunctions = LinearTerm.map_int_FunctionPtr({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+  varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
 
   #BEGIN TESTS
   
