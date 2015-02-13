@@ -5,6 +5,14 @@
 
 %include "std_string.i"
 %include "Var.i"
+%include "std_set.i"
+%include "std_map.i"
+
+namespace std {
+    %template(IntSet) set<int>;
+    %template(MapIntToFunction) map<int,FunctionPtr>;
+}
+using namespace std;
 
 %nodefaultctor LinearTerm;  // Disable the default constructor for class LinearTerm                                                                                                  
 
@@ -19,6 +27,13 @@ public:
   int rank();
 
   string displayString();
+  
+  %extend {
+  FunctionPtr evaluate(const map<int, FunctionPtr> &varFunctions) {
+    map<int, FunctionPtr> varFunctionsCopy = varFunctions; 
+    return evaluate(varFunctionsCopy); 
+  }
+}
   
   
 
