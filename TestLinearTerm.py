@@ -27,7 +27,7 @@ class TestFunction(unittest.TestCase):
    self.assertEqual(lt.displayString(), 'x + y'
     
    
-  def test_rank_(self):
+  def test_Rank_(self):
    var1 = myFactory.testVar("Test", HGRAD)
    x2 = f.xn(2)
    y4 = f.yn(4)
