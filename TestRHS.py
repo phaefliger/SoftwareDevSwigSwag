@@ -11,6 +11,10 @@ class TestRHS(unittest.TestCase):
         self.assertEqual(rhs.rhs(), rhs.rhs())
         
     # --- not sure how RHS works, need more info to write tests for nonZeroRHS and addTerm
+        def test_nonZeroRHS_(self):
+            r = rhs.rhs()
+            l = LinearTerm.LinearTerm_LinearTerm()
+            
     
     def test_linearTerm_(self):
         r = rhs.rhs()
