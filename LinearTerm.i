@@ -14,7 +14,14 @@ namespace std {
 }
 using namespace std;
 
-%nodefaultctor LinearTerm;  // Disable the default constructor for class LinearTerm                                                                                                  
+%nodefaultctor LinearTerm;  // Disable the default constructor for class LinearTerm        
+
+%extend {
+  FunctionPtr evaluate(const map<int, FunctionPtr> &varFunctions) {
+    map<int, FunctionPtr> varFunctionsCopy = varFunctions; 
+    return evaluate(varFunctionsCopy); 
+  }
+}
 
 class LinearTerm {
 public:                                                                                                                                                       
@@ -28,12 +35,7 @@ public:
 
   string displayString();
   
-  %extend {
-  FunctionPtr evaluate(const map<int, FunctionPtr> &varFunctions) {
-    map<int, FunctionPtr> varFunctionsCopy = varFunctions; 
-    return evaluate(varFunctionsCopy); 
-  }
-}
+  
   
   
 
