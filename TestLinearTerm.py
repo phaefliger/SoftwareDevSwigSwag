@@ -18,10 +18,26 @@ class TestLinearTerm(unittest.TestCase):
   #BEGIN TESTS
   
   def test_varIDs_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    varID = (var1.ID(),var2.ID())
    self.assertEqual(varID, ltMain.varIDs())
     
   def test_displayString_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    var1 = myFactory.fieldVar("x")
    var2 = myFactory.fieldVar("y")
    lt = var1 + var2
@@ -46,6 +62,14 @@ class TestLinearTerm(unittest.TestCase):
    self.assertEqual(1, lt2.rank())
    
   def test_termType_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    var1 = myFactory.testVar("Test", HGRAD)
    f1 = Function.Function.xn(2)
    myLT = f1*var1
@@ -58,22 +82,54 @@ class TestLinearTerm(unittest.TestCase):
     #Add overloads
     
   def test_addLTLT_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTemp = var3 + var4
    ltTest = ltTemp + ltMain
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 80.0)
    
   def test_addLTV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = ltMain + var3
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 16.0)
     
   def test_addVLT_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var3 + ltMain
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 16.0)
       
   def test_addVV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var3 + var4
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 7.0)
@@ -81,26 +137,66 @@ class TestLinearTerm(unittest.TestCase):
       #Mul overloads
       
   def test_mulFV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = Function.Function_xn(2) * var1
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 27.0)
       
   def test_mulVF_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest =  var1 * Function.Function_xn(2) 
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 27.0)
   
   def test_mulDV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = 2.0 * var1
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 6.0)
       
   def test_mulVD_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var1 * 2.0
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3, 4), 6.0)
     
   def test_mulVecV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    vec = [1.0, 1.0]
    ltTest = vec * var1
    eval = ltTest.evaluate(varFunctions)
@@ -110,6 +206,14 @@ class TestLinearTerm(unittest.TestCase):
    self.assertEqual(y.evaluate(3, 4), 4.0)
     
   def test_mulVVec_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    vec = [1.0, 1.0]
    ltTest = var1 * vec
    eval = ltTest.evaluate(varFunctions)
@@ -119,6 +223,14 @@ class TestLinearTerm(unittest.TestCase):
    self.assertEqual(y.evaluate(3, 4), 4.0) 
       
   def test_mulLTF_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = ltMain * Function.Function_xn(2)
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), 63.0)
@@ -128,11 +240,27 @@ class TestLinearTerm(unittest.TestCase):
     #Div overloads
     
   def test_divVW_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var1 / 3.0
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), 1.0)
       
   def test_divVF_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var1 / Function.Function_xn(1)
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), 1.0)
@@ -141,31 +269,79 @@ class TestLinearTerm(unittest.TestCase):
     #Neg and sub overloads
     
   def test_subVV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var1 - var2
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(4,3), 1.0)
       
   def test_negV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = - var1
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), -3.0)
       
   def test_negLT_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = - ltMain
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), -7.0)
     
   def test_subLTV_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = ltMain - var1
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), 4.0)
     
   def test_subVLT_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTest = var1 - ltMain
    eval = ltTest.evaluate(varFunctions)
    self.assertEqual(eval.evaluate(3,4), -4.0)
     
   def test_subLTLT_(self):
+   yFactory = VarFactory.VarFactory()
+   var1 = myFactory.fieldVar("x")
+   var2 = myFactory.fieldVar("y")
+   var3 = myFactory.fieldVar("x^2")
+   var4 = myFactory.fieldVar("y^3")
+   ltMain = var1 + var2
+   varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+
    ltTemp = var3 + var4
    ltTest = ltTemp - ltMain
    eval = ltTest.evaluate(varFunctions)
