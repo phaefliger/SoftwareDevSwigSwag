@@ -154,10 +154,18 @@
    self.assertAlmostEqual(50.0, f.evaluate(x2*2, 5, 1), delta=1e-12)
    
   def test_multVF_(self):
-   
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   h = [3.0, 2.0]
+   g = f.vectorize(x2, y4)
+   self.assertAlmostEqual(59.0, f.evaluate(h * g, 3, 2), delta=1e-12)
    
   def test_multFV_(self):
-   
+   x2 = f.xn(2)
+   y4 = f.yn(4)
+   h = [3.0, 2.0]
+   g = f.vectorize(x2, y4)
+   self.assertAlmostEqual(174.0, f.evaluate(g * h, 2, 3), delta=1e-12)
    
   def test_addFF_(self):
    x2 = f.xn(2)
