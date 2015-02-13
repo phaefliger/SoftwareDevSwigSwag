@@ -7,13 +7,13 @@ import unittest
 import LinearTerm
  
 class TestLinearTerm(unittest.TestCase):
-  myFactory = VarFactory.VarFactory()
-  var1 = myFactory.fieldVar("x")
-  var2 = myFactory.fieldVar("y")
-  var3 = myFactory.fieldVar("x^2")
-  var4 = myFactory.fieldVar("y^3")
-  ltMain = var1 + var2
-  varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
+  global myFactory = VarFactory.VarFactory()
+  global var1 = myFactory.fieldVar("x")
+  global var2 = myFactory.fieldVar("y")
+  global var3 = myFactory.fieldVar("x^2")
+  global var4 = myFactory.fieldVar("y^3")
+  global ltMain = var1 + var2
+  global varFunctions = ({var1.ID(): Function.Function.xn(1), var2.ID(): Function.Function.yn(1), var3.ID(): Function.Function.xn(2), var4.ID(): Function.Function.yn(3)})
 
   #BEGIN TESTS
   
@@ -29,7 +29,6 @@ class TestLinearTerm(unittest.TestCase):
     
    
   def test_Rank_(self):
-   global myFactory
    var1 = myFactory.fieldVar("Test")
    x2 = Function.Function.xn(2)
    y4 = Function.Function.yn(4)
