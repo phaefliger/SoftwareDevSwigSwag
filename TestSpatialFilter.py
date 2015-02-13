@@ -24,7 +24,7 @@ class TestSpatialFilter(unittest.TestCase):
         x = sf.matchingX(36.0)
         y = sf.matchingY(64.0)
         xy = sf.unionFilter(x, y)
-        self.assertEqual(True, xy.matchesPoint(36.0, 64.0)
+        self.assertEqual(True, xy.matchesPoint(36.0, 64.0))
         
     # intersectionFilter
     def test_intersectionFilter_(self):
