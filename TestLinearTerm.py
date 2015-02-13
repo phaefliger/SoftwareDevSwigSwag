@@ -1,11 +1,11 @@
 import Function
- import VarFactory
- import Var
- import BF
- import MeshFactory
- import unittest
+import VarFactory
+import Var
+import BF
+import MeshFactory
+import unittest
  
- class TestFunction(unittest.TestCase):
+class TestFunction(unittest.TestCase):
   myFactory = VarFactory.VarFactory()
   var1 = myFactory.fieldVar("x")
   var2 = myFactory.fieldVar("y")
