@@ -82,6 +82,40 @@ VECTOR_HGRAD = _LinearTerm.VECTOR_HGRAD
 VECTOR_HGRAD_DISC = _LinearTerm.VECTOR_HGRAD_DISC
 VECTOR_L2 = _LinearTerm.VECTOR_L2
 UNKNOWN_FS = _LinearTerm.UNKNOWN_FS
+OP_VALUE = _LinearTerm.OP_VALUE
+OP_GRAD = _LinearTerm.OP_GRAD
+OP_CURL = _LinearTerm.OP_CURL
+OP_DIV = _LinearTerm.OP_DIV
+OP_D1 = _LinearTerm.OP_D1
+OP_D2 = _LinearTerm.OP_D2
+OP_D3 = _LinearTerm.OP_D3
+OP_D4 = _LinearTerm.OP_D4
+OP_D5 = _LinearTerm.OP_D5
+OP_D6 = _LinearTerm.OP_D6
+OP_D7 = _LinearTerm.OP_D7
+OP_D8 = _LinearTerm.OP_D8
+OP_D9 = _LinearTerm.OP_D9
+OP_D10 = _LinearTerm.OP_D10
+OP_X = _LinearTerm.OP_X
+OP_Y = _LinearTerm.OP_Y
+OP_Z = _LinearTerm.OP_Z
+OP_DX = _LinearTerm.OP_DX
+OP_DY = _LinearTerm.OP_DY
+OP_DZ = _LinearTerm.OP_DZ
+OP_CROSS_NORMAL = _LinearTerm.OP_CROSS_NORMAL
+OP_DOT_NORMAL = _LinearTerm.OP_DOT_NORMAL
+OP_TIMES_NORMAL = _LinearTerm.OP_TIMES_NORMAL
+OP_TIMES_NORMAL_X = _LinearTerm.OP_TIMES_NORMAL_X
+OP_TIMES_NORMAL_Y = _LinearTerm.OP_TIMES_NORMAL_Y
+OP_TIMES_NORMAL_Z = _LinearTerm.OP_TIMES_NORMAL_Z
+OP_TIMES_NORMAL_T = _LinearTerm.OP_TIMES_NORMAL_T
+OP_VECTORIZE_VALUE = _LinearTerm.OP_VECTORIZE_VALUE
+TEST = _LinearTerm.TEST
+FIELD = _LinearTerm.FIELD
+TRACE = _LinearTerm.TRACE
+FLUX = _LinearTerm.FLUX
+UNKNOWN_TYPE = _LinearTerm.UNKNOWN_TYPE
+MIXED_TYPE = _LinearTerm.MIXED_TYPE
 class Var(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Var, name, value)
@@ -89,6 +123,21 @@ class Var(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, Var, name)
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
+    def ID(self): return _LinearTerm.Var_ID(self)
+    def name(self): return _LinearTerm.Var_name(self)
+    def displayString(self): return _LinearTerm.Var_displayString(self)
+    def rank(self): return _LinearTerm.Var_rank(self)
+    def space(self): return _LinearTerm.Var_space(self)
+    def varType(self): return _LinearTerm.Var_varType(self)
+    def op(self): return _LinearTerm.Var_op(self)
+    def termTraced(self): return _LinearTerm.Var_termTraced(self)
+    def grad(self): return _LinearTerm.Var_grad(self)
+    def div(self): return _LinearTerm.Var_div(self)
+    def curl(self, *args): return _LinearTerm.Var_curl(self, *args)
+    def dx(self): return _LinearTerm.Var_dx(self)
+    def dy(self): return _LinearTerm.Var_dy(self)
+    def x(self): return _LinearTerm.Var_x(self)
+    def y(self): return _LinearTerm.Var_y(self)
     __swig_destroy__ = _LinearTerm.delete_Var
     __del__ = lambda self : None;
 Var_swigregister = _LinearTerm.Var_swigregister
@@ -101,12 +150,32 @@ class VarPtr(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, VarPtr, name)
     __repr__ = _swig_repr
     def __deref__(self): return _LinearTerm.VarPtr___deref__(self)
+    def __mul__(self, *args): return _LinearTerm.VarPtr___mul__(self, *args)
+    def __rmul__(self, *args): return _LinearTerm.VarPtr___rmul__(self, *args)
+    def __add__(self, *args): return _LinearTerm.VarPtr___add__(self, *args)
+    def __div__(self, *args): return _LinearTerm.VarPtr___div__(self, *args)
+    def __sub__(self, *args): return _LinearTerm.VarPtr___sub__(self, *args)
     def __init__(self): 
         this = _LinearTerm.new_VarPtr()
         try: self.this.append(this)
         except: self.this = this
     __swig_destroy__ = _LinearTerm.delete_VarPtr
     __del__ = lambda self : None;
+    def ID(self): return _LinearTerm.VarPtr_ID(self)
+    def name(self): return _LinearTerm.VarPtr_name(self)
+    def displayString(self): return _LinearTerm.VarPtr_displayString(self)
+    def rank(self): return _LinearTerm.VarPtr_rank(self)
+    def space(self): return _LinearTerm.VarPtr_space(self)
+    def varType(self): return _LinearTerm.VarPtr_varType(self)
+    def op(self): return _LinearTerm.VarPtr_op(self)
+    def termTraced(self): return _LinearTerm.VarPtr_termTraced(self)
+    def grad(self): return _LinearTerm.VarPtr_grad(self)
+    def div(self): return _LinearTerm.VarPtr_div(self)
+    def curl(self, *args): return _LinearTerm.VarPtr_curl(self, *args)
+    def dx(self): return _LinearTerm.VarPtr_dx(self)
+    def dy(self): return _LinearTerm.VarPtr_dy(self)
+    def x(self): return _LinearTerm.VarPtr_x(self)
+    def y(self): return _LinearTerm.VarPtr_y(self)
 VarPtr_swigregister = _LinearTerm.VarPtr_swigregister
 VarPtr_swigregister(VarPtr)
 

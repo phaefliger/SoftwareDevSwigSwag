@@ -330,6 +330,53 @@ class SolutionPtr(_object):
 SolutionPtr_swigregister = _Function.SolutionPtr_swigregister
 SolutionPtr_swigregister(SolutionPtr)
 
+class DoubleVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DoubleVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _Function.DoubleVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _Function.DoubleVector___nonzero__(self)
+    def __bool__(self): return _Function.DoubleVector___bool__(self)
+    def __len__(self): return _Function.DoubleVector___len__(self)
+    def pop(self): return _Function.DoubleVector_pop(self)
+    def __getslice__(self, *args): return _Function.DoubleVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _Function.DoubleVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _Function.DoubleVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _Function.DoubleVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _Function.DoubleVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _Function.DoubleVector___setitem__(self, *args)
+    def append(self, *args): return _Function.DoubleVector_append(self, *args)
+    def empty(self): return _Function.DoubleVector_empty(self)
+    def size(self): return _Function.DoubleVector_size(self)
+    def clear(self): return _Function.DoubleVector_clear(self)
+    def swap(self, *args): return _Function.DoubleVector_swap(self, *args)
+    def get_allocator(self): return _Function.DoubleVector_get_allocator(self)
+    def begin(self): return _Function.DoubleVector_begin(self)
+    def end(self): return _Function.DoubleVector_end(self)
+    def rbegin(self): return _Function.DoubleVector_rbegin(self)
+    def rend(self): return _Function.DoubleVector_rend(self)
+    def pop_back(self): return _Function.DoubleVector_pop_back(self)
+    def erase(self, *args): return _Function.DoubleVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _Function.new_DoubleVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _Function.DoubleVector_push_back(self, *args)
+    def front(self): return _Function.DoubleVector_front(self)
+    def back(self): return _Function.DoubleVector_back(self)
+    def assign(self, *args): return _Function.DoubleVector_assign(self, *args)
+    def resize(self, *args): return _Function.DoubleVector_resize(self, *args)
+    def insert(self, *args): return _Function.DoubleVector_insert(self, *args)
+    def reserve(self, *args): return _Function.DoubleVector_reserve(self, *args)
+    def capacity(self): return _Function.DoubleVector_capacity(self)
+    __swig_destroy__ = _Function.delete_DoubleVector
+    __del__ = lambda self : None;
+DoubleVector_swigregister = _Function.DoubleVector_swigregister
+DoubleVector_swigregister(DoubleVector)
+
 class Function(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Function, name, value)
