@@ -6,7 +6,7 @@ import MeshFactory
 import unittest
 import LinearTerm
  
-class TestFunction(unittest.TestCase):
+class TestLinearTerm(unittest.TestCase):
   myFactory = VarFactory.VarFactory()
   var1 = myFactory.fieldVar("x")
   var2 = myFactory.fieldVar("y")
