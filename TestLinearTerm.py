@@ -4,6 +4,7 @@ import Var
 import BF
 import MeshFactory
 import unittest
+import LinearTerm
  
 class TestFunction(unittest.TestCase):
   myFactory = VarFactory.VarFactory()
