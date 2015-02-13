@@ -28,7 +28,7 @@ class TestFunction(unittest.TestCase):
     
    
   def test_Rank_(self):
-   var1 = myFactory.testVar("Test", HGRAD)
+   var1 = myFactory.fieldVar("Test")
    x2 = Function.Function.xn(2)
    y4 = Function.Function.yn(4)
    v = Function.Function.vectorize(x2, y4)
